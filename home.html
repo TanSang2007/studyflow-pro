@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StudyFlow Pro</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HIỆU ỨNG NỀN -->
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+
+    <!-- HẠT BAY -->
+    <div id="particles"></div>
+
+    <div class="container">
+      <!-- NAVBAR -->
+
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-icon">📚</div>
+
+          <span>StudyFlow Pro</span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active-link"> Home </a>
+          </li>
+
+          <li>
+            <a href="introduce.html"> Giới thiệu </a>
+          </li>
+        </ul>
+
+        <div class="nav-buttons">
+          <button class="btn login-btn">
+            <a href="login.html" style="text-decoration: none; color: inherit"
+              >Login</a
+            >
+          </button>
+
+          <button class="btn register-btn">
+            <a
+              href="register.html"
+              style="text-decoration: none; color: inherit"
+              >Register</a
+            >
+          </button>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+
+      <section class="hero">
+        <!-- LEFT -->
+
+        <div class="hero-left">
+          <div class="badge">🚀 Nền tảng quản lý học tập hiện đại</div>
+
+          <h1>
+            Hệ Thống Quản Lý
+            <span>Deadline Sinh Viên</span>
+            Thông Minh
+          </h1>
+
+          <p>
+            Quản lý bài tập, deadline, lịch học và tiến độ học tập theo cách
+            hiện đại, trực quan và dễ sử dụng hơn.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="start-btn">
+              <a href="login.html" style="text-decoration: none; color: inherit"
+                >Bắt Đầu Ngay</a
+              >
+            </button>
+
+            <button class="demo-btn">▶ Xem Demo</button>
+          </div>
+
+          <!-- THỐNG KÊ -->
+
+          <div class="stats">
+            <div class="stat-card">
+              <h2 id="users">0</h2>
+
+              <span>Sinh viên</span>
+            </div>
+
+            <div class="stat-card">
+              <h2 id="tasks">0</h2>
+
+              <span>Deadline</span>
+            </div>
+
+            <div class="stat-card">
+              <h2 id="schools">0</h2>
+
+              <span>Trường học</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+          <div class="floating circle-big"></div>
+
+          <div class="shape cube cube1"></div>
+          <div class="shape cube cube2"></div>
+          <div class="shape cube cube3"></div>
+
+          <div class="small-ball ball1"></div>
+          <div class="small-ball ball2"></div>
+
+          <!-- GLASS CARD -->
+
+          <div class="glass-card">
+            <div class="glass-header">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+
+            <div class="task">
+              <span>📘 Báo cáo Java</span>
+
+              <small>12/05</small>
+            </div>
+
+            <div class="task">
+              <span>📗 Thiết kế Web</span>
+
+              <small>15/05</small>
+            </div>
+
+            <div class="task">
+              <span>📙 Hibernate</span>
+
+              <small>18/05</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+      // HẠT BAY
+
+      const particles = document.getElementById("particles");
+
+      for (let i = 0; i < 40; i++) {
+        const particle = document.createElement("div");
+
+        particle.classList.add("particle");
+
+        particle.style.left = Math.random() * 100 + "vw";
+
+        particle.style.top = Math.random() * 100 + "vh";
+
+        particle.style.animationDuration = Math.random() * 10 + 5 + "s";
+
+        particle.style.opacity = Math.random();
+
+        /* RANDOM SIZE */
+
+        particle.style.width = Math.random() * 5 + 3 + "px";
+
+        particle.style.height = particle.style.width;
+
+        particles.appendChild(particle);
+      }
+
+      // COUNTER
+
+      function animateCounter(id, target) {
+        let count = 0;
+
+        const element = document.getElementById(id);
+
+        const speed = target / 100;
+
+        function updateCounter() {
+          count += speed;
+
+          if (count < target) {
+            element.innerText = Math.floor(count) + "+";
+
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.innerText = target + "+";
+          }
+        }
+
+        updateCounter();
+      }
+
+      animateCounter("users", 5000);
+      animateCounter("tasks", 12000);
+      animateCounter("schools", 120);
+    </script>
+  </body>
+</html>
