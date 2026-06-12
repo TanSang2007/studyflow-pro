@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding: 40px; }
+        .reg-box { background: white; width: 450px; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; margin-bottom: 30px; }
+        input, select { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .note { font-size: 12px; color: #777; margin-top: -10px; margin-bottom: 15px; }
+        .terms { font-size: 13px; margin-bottom: 20px; }
+        .btn-reg { width: 100%; padding: 12px; background-color: #f32121; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="reg-box">
+        <h2>Đăng ký</h2>
+        <form>
+            <input type="text" placeholder="Tên truy cập">
+            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Nhập lại mật khẩu">
+            <input type="email" placeholder="Email">
+            <p class="note">bạn cần sử dụng email này trong trường hợp cần đặt lại mật khẩu</p>
+            <select>
+                <option>Việt Nam (Việt Nam)</option>
+                <option>USA</option>
+            </select>
+            <div class="terms">
+                <input type="checkbox" style="width: auto;"> Tôi đồng ý với <a href="#">Điều Khoản Dịch Vụ</a> và <a href="#">Chính Sách Bảo Mật</a>
+            </div>
+            <button type="submit" class="btn-reg">Đăng Ký Ngay</button>
+        </form>
+    </div>
+</body>
+</html>

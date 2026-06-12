@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Portfolio Cá Nhân</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar { background-color: #343a40; }
+        .navbar-brand, .nav-link { color: #fff !important; }
+        
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        .carousel-caption {
+            bottom: 20%;
+            text-align: center;
+        }
+
+        .portfolio-item { margin-bottom: 30px; }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="Chào tháng 3">
+                <div class="carousel-caption">
+                    <h1>Chào tháng 3</h1>
+                    <p>Xin chào bạn, tôi rất buồn...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 1"></div>
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 2"></div>
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 3"></div>
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 4"></div>
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 5"></div>
+            <div class="col-md-4 portfolio-item"><img src="https://via.placeholder.com/400x300" alt="Project 6"></div>
+        </div>
+
+        <hr>
+
+        <h2 class="mt-5 mb-4">Danh sách thành viên Đội Công tác xã hội</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="https://via.placeholder.com/300x400" class="img-fluid border" alt="Chủ nhiệm">
+                <p class="fw-bold mt-2">Chu nhiệm Đội</p>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-striped table-hover border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Họ</th>
+                            <th>Tên</th>
+                            <th>Điện thoại</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                        <tr><td>Pham Quoc</td><td>Khai</td><td>khai@cit.udn.vn</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Copyright &copy; Your Website 2018</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

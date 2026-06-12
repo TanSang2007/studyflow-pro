@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin tài khoản</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+        .container {
+            width: 700px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+        }
+        .avatar-box {
+            width: 180px;
+            text-align: center;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .form {
+            flex: 1;
+        }
+        h2 {
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input, select {
+            padding: 5px;
+            width: 220px;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        .row select {
+            width: 70px;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="avatar-box">
+        <div class="avatar" id="preview">
+            <span>Chưa cập nhật<br>Hình Ảnh</span>
+        </div>
+        <input type="file" id="file" accept="image/*">
+    </div>
+
+    <div class="form">
+        <h2>Thông tin tài khoản (bắt buộc)</h2>
+
+        <form>
+            <div class="form-group">
+                <label>Họ tên *</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Số điện thoại *</label>
+                <input type="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ngày sinh *</label>
+                <div class="row">
+                    <select id="day"></select>
+                    <select id="month"></select>
+                    <select id="year"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính *</label>
+                <select>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Hôn nhân *</label>
+                <select>
+                    <option>Độc thân</option>
+                    <option>Đã kết hôn</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tỉnh/Thành phố *</label>
+                <select>
+                    <option>Đà Nẵng</option>
+                    <option>Hà Nội</option>
+                    <option>TP.HCM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Chỗ ở hiện tại *</label>
+                <input type="text">
+            </div>
+
+            <button type="submit">Lưu</button>
+        </form>
+    </div>
+
+</div>
+
+<script>
+for (let i = 1; i <= 31; i++) {
+    day.innerHTML += `<option>${i}</option>`;
+}
+for (let i = 1; i <= 12; i++) {
+    month.innerHTML += `<option>${i}</option>`;
+}
+let y = new Date().getFullYear();
+for (let i = y; i >= 1950; i--) {
+    year.innerHTML += `<option>${i}</option>`;
+}
+
+file.onchange = e => {
+    const [f] = file.files;
+    if (f) {
+        preview.innerHTML = `<img src="${URL.createObjectURL(f)}">`;
+    }
+};
+</script>
+
+</body>
+</html>

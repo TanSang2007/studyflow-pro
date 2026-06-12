@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>LAB 9 - Bài 2</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 { text-align: center; }
+    .rotate-area {
+      width: 260px;
+      height: 340px;
+      position: relative;
+      margin: 20px auto;
+    }
+    .box {
+      width: 150px;
+      height: 150px;
+      background: #777;
+      color: white;
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 45px;
+      transform-origin: top left;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .box-top {
+      top: 0;
+      animation-name: rotateTop;
+    }
+    .box-right {
+      top: 180px;
+      animation-name: rotateRight;
+    }
+    @keyframes rotateTop {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(-18deg); }
+    }
+    @keyframes rotateRight {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(18deg); }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Bài 2: CSS3 Rotation</h2>
+    <div class="rotate-area">
+      <div class="box box-top">top</div>
+      <div class="box box-right">right</div>
+    </div>
+  </section>
+</body>
+</html>

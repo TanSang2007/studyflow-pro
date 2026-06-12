@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      select {
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .field-group {
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: top;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <b style="font-size: 20px">Enter your billing details</b>
+    <span style="float: right">🔒 SECURE</span>
+    <br /><br />
+
+    <label for="cardnumber">
+      <b>Credit card number</b><br />
+      <input
+        type="text"
+        id="cardnumber"
+        name="cardnumber"
+        style="width: 350px"
+        required
+      />
+    </label>
+
+    <br />
+    <div style="margin-top: 5px">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/3840px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png"
+        width="40"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+        width="30"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1280px-American_Express_logo_%282018%29.svg.png"
+        width="30"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQslI5EhEGQeZ15bfFh7Esho6L9BqRev8s9EQ&s"
+        alt=""
+        width="30"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1280px-JCB_logo.svg.png"
+        width="30"
+      />
+      <img
+        src="https://e7.pngegg.com/pngimages/640/836/png-clipart-diners-club-international-credit-card-american-express-mastercard-credit-card-blue-text-thumbnail.png"
+        alt=""
+        width="30"
+      />
+      <span style="font-size: 14px; color: gray; margin-left: 10px"
+        >Accepted cards</span
+      >
+    </div>
+
+    <div class="field-group">
+      <b
+        >Expiration
+        <span style="font-weight: normal; font-size: 12px">(MM/YY)</span></b
+      ><br />
+      <select>
+        <option>&#x21c5;</option>
+      </select>
+      /
+      <select>
+        <option>&#x21c5;</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <b>CVV (?)</b><br />
+      <input type="text" style="width: 80px" />
+    </div>
+
+    <br />
+
+    <div class="field-group">
+      <b>Country</b><br />
+      <select style="width: 150px">
+        <option>Choose country</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <b>State</b><br />
+      <select style="width: 100px">
+        <option></option>
+      </select>
+    </div>
+
+    <br />
+
+    <div class="field-group">
+      <b>Postal Code</b><br />
+      <input type="text" style="width: 150px" />
+    </div>
+  </body>
+  </html>

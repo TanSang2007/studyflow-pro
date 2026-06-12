@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tham khảo</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; display: flex; justify-content: center; }
+        .container { background: white; width: 600px; padding: 20px; border: 1px solid #ccc; border-top: 4px solid #d9534f; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; }
+        .title { color: #337ab7; font-weight: bold; border-left: 4px solid red; padding-left: 10px; }
+        
+        .form-group { display: flex; margin-bottom: 10px; align-items: center; }
+        .label { width: 150px; text-align: right; padding-right: 15px; font-size: 13px; }
+        .label span { color: red; }
+        .input-content { flex: 1; }
+        
+        input[type="text"] { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; }
+        
+        .btn-group { margin-left: 150px; display: flex; gap: 10px; margin-top: 15px; margin-bottom: 20px; }
+        .btn { padding: 6px 15px; border: none; border-radius: 3px; color: white; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .btn-save { background: #d9534f; }
+        .btn-cancel { background: #777; }
+
+        .privacy-option { font-size: 13px; color: #555; display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="title">Tham khảo <span style="font-style: italic; font-weight: normal; color: #77b5d9;">(không bắt buộc)</span></div>
+        <button style="font-size: 11px;">Rút gọn ▲</button>
+    </div>
+
+    <div class="form-group">
+        <div class="label">Người tham khảo <span>*</span></div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Chức danh <span>*</span></div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Tên công ty <span>*</span></div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Email <span>*</span></div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Số điện thoại <span>*</span></div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-save">💾 Lưu</button>
+        <button class="btn btn-cancel">✖ Không lưu</button>
+    </div>
+
+    <div class="privacy-section">
+        <div class="privacy-option">
+            <input type="radio" name="privacy" id="p1">
+<label for="p1">Cho phép Nhà tuyển dụng tìm kiếm thông tin của bạn và chủ động liên hệ mời phỏng vấn</label>
+        </div>
+        <div class="privacy-option">
+            <input type="radio" name="privacy" id="p2">
+            <label for="p2">Không cho phép nhà tuyển dụng tìm kiếm. Hồ sơ này chỉ dùng để ứng tuyển</label>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

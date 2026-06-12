@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 - Bảng mã màu</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; display: flex; justify-content: center; }
+        
+        .color-table {
+            display: grid;
+            grid-template-columns: repeat(4, 120px); /* 4 cột, mỗi cột 120px */
+            gap: 15px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .color-card {
+            border: 1px solid #ddd;
+            background: white;
+            text-align: center;
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+
+        .swatch {
+            height: 80px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        /* Định nghĩa màu cụ thể */
+        .black { background-color: black; }
+        .grey { background-color: grey; }
+        .maroon { background-color: maroon; }
+        .brown { background-color: #4B2C20; }
+        .red { background-color: red; }
+        .orange { background-color: orange; }
+        .gold { background-color: gold; }
+        .yellow { background-color: yellow; }
+        .pale-yellow { background-color: #FFFFCC; }
+        .lime { background-color: #CCFF00; }
+        .dark-green { background-color: #228B22; }
+        .bright-green { background-color: #00FF00; }
+        .spring-green { background-color: #7FFF00; }
+        .cyan { background-color: #00FFFF; }
+        .magenta { background-color: #FF00FF; }
+        .blue { background-color: blue; }
+    </style>
+</head>
+<body>
+
+    <div class="color-table">
+        <div class="color-card"><div class="swatch black"></div>Đen</div>
+        <div class="color-card"><div class="swatch grey"></div>Ghi xám</div>
+        <div class="color-card"><div class="swatch maroon"></div>Đỏ đun</div>
+        <div class="color-card"><div class="swatch brown"></div>Nâu</div>
+
+        <div class="color-card"><div class="swatch red"></div>Đỏ cờ</div>
+        <div class="color-card"><div class="swatch orange"></div>Cam</div>
+        <div class="color-card"><div class="swatch gold"></div>Vàng đất</div>
+        <div class="color-card"><div class="swatch yellow"></div>Vàng tươi</div>
+
+        <div class="color-card"><div class="swatch pale-yellow"></div>Vàng mơ</div>
+        <div class="color-card"><div class="swatch lime"></div>Vàng chanh</div>
+        <div class="color-card"><div class="swatch dark-green"></div>Xanh lá đậm</div>
+        <div class="color-card"><div class="swatch bright-green"></div>Xanh lá tươi</div>
+
+        <div class="color-card"><div class="swatch spring-green"></div>Xanh nõn chuối</div>
+        <div class="color-card"><div class="swatch cyan"></div>Xanh lơ</div>
+        <div class="color-card"><div class="swatch magenta"></div>Xanh cánh sen</div>
+        <div class="color-card"><div class="swatch blue"></div>Xanh nước biển</div>
+</div>
+
+</body>
+</html>

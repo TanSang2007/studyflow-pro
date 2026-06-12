@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Please enter the first number"))
+        let b=parseInt(prompt("Please enter the second number"))
+        if(!isNaN(a)&&!isNaN(b)){
+        let sum=a+b;        
+        let div=a/b;
+        let minus=a-b;
+        let multiple=a*b;
+        document.writeln(a + " + " + b +" = "+sum +"<br>");
+        document.writeln(a + " - " + b +" = "+minus+"<br>");
+        document.writeln(a + " * " + b +" = "+multiple+"<br>");
+        document.writeln(a + " / " + b +" = "+div);
+        }
+        else{
+            document.writeln("lỗi")
+        }
+
+    </script>
+</body>
+</html>

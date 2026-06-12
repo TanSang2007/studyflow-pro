@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow Pro</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6b7a2b9b09.js"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- LANDING -->
+
+    <div class="landing-page"
+        id="landingPage">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                📚 StudyFlow Pro
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="#">Trang Chủ</a>
+
+                <a href="#">Tính Năng</a>
+
+                <a href="#">Liên Hệ</a>
+
+                <button onclick="openLogin()">
+
+                    Đăng Nhập
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h1>
+
+                    Hệ Thống Quản Lý Deadline
+                    Sinh Viên Hiện Đại 🚀
+
+                </h1>
+
+                <p>
+
+                    Quản lý deadline, lịch học,
+                    tiến độ học tập và ghi chú
+                    thông minh hơn.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button onclick="openLogin()">
+
+                        Bắt Đầu Ngay
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- LOGIN -->
+
+    <div class="login-page"
+        id="loginPage">
+
+        <div class="login-left">
+
+            <h1>📘 StudyFlow</h1>
+
+            <p>
+
+                Hệ thống quản lý học tập
+                thông minh dành cho sinh viên.
+
+            </p>
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png">
+
+        </div>
+
+        <div class="login-box">
+
+            <h2>Đăng Nhập</h2>
+
+            <input type="text"
+                id="username"
+                placeholder="Tên đăng nhập">
+
+            <input type="password"
+                id="password"
+                placeholder="Mật khẩu">
+
+            <button onclick="login()">
+
+                Đăng Nhập
+
+            </button>
+
+            <div class="social-login">
+
+                <button class="google-btn">
+
+                    Google
+
+                </button>
+
+                <button class="facebook-btn">
+
+                    Facebook
+
+                </button>
+
+            </div>
+
+            <p class="demo">
+
+                Demo:
+                admin / 123456
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- APP -->
+
+    <div class="app"
+        id="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h2>📚 StudyFlow</h2>
+
+            <ul>
+
+                <li class="active"
+                    onclick="showPage('dashboard',this)">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </li>
+
+                <li onclick="showPage('deadlines',this)">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    Deadline
+
+                </li>
+
+                <li onclick="showPage('calendar',this)">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    Lịch Học
+
+                </li>
+
+                <li onclick="showPage('subjects',this)">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    Môn Học
+
+                </li>
+
+                <li onclick="showPage('progress',this)">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Tiến Độ
+
+                </li>
+
+                <li onclick="showPage('notes',this)">
+
+                    <i class="fa-solid fa-note-sticky"></i>
+
+                    Ghi Chú
+
+                </li>
+
+                <li onclick="showPage('notifications',this)">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    Thông Báo
+
+                </li>
+
+                <li onclick="showPage('settings',this)">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Cài Đặt
+
+                </li>
+
+            </ul>
+
+            <button class="logout-btn"
+                onclick="logout()">
+
+                Đăng Xuất
+
+            </button>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+            <!-- DASHBOARD -->
+
+            <section id="dashboard"
+                class="page active-page">
+
+                <div class="topbar">
+
+                    <h1>Xin Chào 👋</h1>
+
+                    <div class="profile">
+
+                        <img src="https://i.pravatar.cc/100">
+
+                        <span>Sinh Viên</span>
+
+                    </div>
+
+                </div>
+
+                <div class="welcome-card">
+
+                    <div>
+
+                        <h2>
+
+                            Quản Lý Deadline
+                            Hiệu Quả Hơn
+
+                        </h2>
+
+                        <p>
+
+                            Theo dõi deadline,
+                            tiến độ và lịch học
+                            mỗi ngày.
+
+                        </p>
+
+                    </div>
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+
+                </div>
+
+                <div class="stats">
+
+                    <div class="card">
+
+                        <h2 id="totalTask">
+
+                            0
+
+                        </h2>
+
+                        <p>Tổng Deadline</p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h2 id="completedTask">
+
+                            0
+
+                        </h2>
+
+                        <p>Đã Hoàn Thành</p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h2 id="pendingTask">
+
+                            0
+
+                        </h2>
+
+                        <p>Đang Thực Hiện</p>
+
+                    </div>
+
+                </div>
+
+                <div class="recent-box">
+
+                    <h2>
+
+                        📌 Deadline Gần Nhất
+
+                    </h2>
+
+                    <div class="recent-item">
+
+                        <p>Đồ Án Web</p>
+
+                        <span>Ngày mai</span>
+
+                    </div>
+
+                    <div class="recent-item">
+
+                        <p>Báo Cáo Java</p>
+
+                        <span>2 ngày nữa</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+            
+
+            <!-- DEADLINE -->
+             <!-- CALENDAR -->
+
+<section id="calendar"
+    class="page">
+
+    <h1>📅 Lịch Học</h1>
+
+    <div class="calendar-grid">
+
+        <div class="calendar-card">
+
+            <h3>Thứ 2</h3>
+
+            <p>HTML CSS</p>
+
+            <span>07:00 - 09:00</span>
+
+        </div>
+
+        <div class="calendar-card">
+
+            <h3>Thứ 3</h3>
+
+            <p>Java OOP</p>
+
+            <span>13:00 - 15:00</span>
+
+        </div>
+
+        <div class="calendar-card">
+
+            <h3>Thứ 4</h3>
+
+            <p>MySQL Database</p>
+
+            <span>09:00 - 11:00</span>
+
+        </div>
+
+        <div class="calendar-card">
+
+            <h3>Thứ 5</h3>
+
+            <p>Android Studio</p>
+
+            <span>15:00 - 17:00</span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- SUBJECT -->
+
+<section id="subjects"
+    class="page">
+
+    <h1>📚 Môn Học</h1>
+
+    <div class="subject-grid">
+
+        <div class="subject-card">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png">
+
+            <h3>JavaScript</h3>
+
+            <p>GV: Nguyễn Văn A</p>
+
+            <span>80% hoàn thành</span>
+
+        </div>
+
+        <div class="subject-card">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+
+            <h3>Java</h3>
+
+            <p>GV: Trần Văn B</p>
+
+            <span>70% hoàn thành</span>
+
+        </div>
+
+        <div class="subject-card">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png">
+
+            <h3>MySQL</h3>
+
+            <p>GV: Lê Văn C</p>
+
+            <span>90% hoàn thành</span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- PROGRESS -->
+
+<section id="progress"
+    class="page">
+
+    <h1>📈 Tiến Độ Học Tập</h1>
+
+    <div class="progress-box">
+
+        <p>HTML</p>
+
+        <div class="progress-bar">
+
+            <div class="fill html">
+
+                90%
+
+            </div>
+
+        </div>
+
+        <p>CSS</p>
+
+        <div class="progress-bar">
+
+            <div class="fill css">
+
+                75%
+
+            </div>
+
+        </div>
+
+        <p>JavaScript</p>
+
+        <div class="progress-bar">
+
+            <div class="fill js">
+
+                60%
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- NOTES -->
+
+<!-- NOTES -->
+
+<section id="notes"
+    class="page">
+
+    <h1>📝 Ghi Chú</h1>
+
+    <div class="note-input">
+
+        <input type="text"
+            id="noteInput"
+            placeholder="Nhập ghi chú...">
+
+        <input type="datetime-local"
+            id="noteTime">
+
+        <button onclick="addNote()">
+
+            Thêm
+
+        </button>
+
+    </div>
+
+    <div class="notes-grid"
+        id="notesGrid">
+
+    </div>
+
+</section>
+<!-- NOTIFICATIONS -->
+
+<section id="notifications"
+    class="page">
+
+    <h1>🔔 Thông Báo</h1>
+
+    <div class="notify urgent">
+
+        ⚠ Deadline Java còn 1 ngày!
+
+    </div>
+
+    <div class="notify warning">
+
+        📌 Deadline Web còn 3 ngày!
+
+    </div>
+
+    <div class="notify success">
+
+        ✅ Đã hoàn thành bài SQL.
+
+    </div>
+
+</section>
+
+<!-- SETTINGS -->
+
+<section id="settings"
+    class="page">
+
+    <h1>⚙ Cài Đặt</h1>
+
+    <button onclick="toggleDarkMode()">
+
+        🌙 Dark Mode
+
+    </button>
+
+    <button onclick="clearAll()">
+
+        🗑 Xóa Deadline
+
+    </button>
+
+</section>
+
+
+
+            <section id="deadlines"
+                class="page">
+
+                <div class="task-form">
+
+                    <h2>➕ Thêm Deadline</h2>
+
+                    <div class="form-grid">
+
+                        <input type="text"
+                            id="title"
+                            placeholder="Tên công việc">
+
+                        <input type="text"
+                            id="subject"
+                            placeholder="Môn học">
+
+                        <input type="datetime-local"
+                            id="deadline">
+
+                        <select id="priority">
+
+                            <option value="🔥 Cao">
+
+                                🔥 Cao
+
+                            </option>
+
+                            <option value="⭐ Trung Bình">
+
+                                ⭐ Trung Bình
+
+                            </option>
+
+                            <option value="🌱 Thấp">
+
+                                🌱 Thấp
+
+                            </option>
+
+                        </select>
+
+                        <button onclick="addTask()">
+
+                            Thêm Deadline
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="top-tools">
+
+                    <input type="text"
+                        id="searchTask"
+                        placeholder="🔍 Tìm deadline..."
+                        onkeyup="searchTask()">
+
+                    <select id="filterPriority"
+                        onchange="filterTask()">
+
+                        <option value="all">
+
+                            Tất cả
+
+                        </option>
+
+                        <option value="🔥 Cao">
+
+                            🔥 Cao
+
+                        </option>
+
+                        <option value="⭐ Trung Bình">
+
+                            ⭐ Trung Bình
+
+                        </option>
+
+                        <option value="🌱 Thấp">
+
+                            🌱 Thấp
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="task-list"
+                    id="taskList"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

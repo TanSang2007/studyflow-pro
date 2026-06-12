@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>LAB 8 - Bài 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef2f3;
+      color: #111;
+    }
+    .container {
+      width: 680px;
+      margin: 20px auto;
+      background: #f7fafa;
+      border: 1px solid #c7c7c7;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+    .section-title {
+      padding: 12px 18px;
+      font-size: 16px;
+      border-bottom: 1px solid #aaa;
+      box-shadow: 0 2px 3px rgba(0,0,0,.25);
+      background: #f9ffff;
+    }
+    .section-title b { color: #1d4054; }
+    ol.questions {
+      margin: 14px 20px;
+      padding-left: 18px;
+      font-weight: bold;
+    }
+    ol.questions > li {
+      padding: 8px 0 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    input[type="radio"] { margin-right: 5px; }
+    table.word-table {
+      width: 100%;
+      padding: 12px 16px;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+    table.word-table td {
+      width: 25%;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    .num {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-title"><b>Phần 1.</b> Chọn câu trả lời mà bạn đã từng hành động hoặc nghĩ mình sẽ hành động</div>
+    <ol class="questions">
+      <li>Khi bạn đi đến một nơi nào đó trong ngày, bạn sẽ
+        <label><input type="radio" name="q1">lên danh sách các công việc và thời gian thực hiện các công việc khi bạn đến đó</label>
+        <label><input type="radio" name="q1">nghĩ đến công việc sẽ làm rồi đi thôi</label>
+      </li>
+      <li>Nếu bạn là một giáo viên, bạn muốn dạy
+        <label><input type="radio" name="q2">các khóa học thực nghiệm (thực tế)</label>
+        <label><input type="radio" name="q2">các khóa học liên quan đến lý thuyết</label>
+      </li>
+      <li>Thường thì bạn có phải là một người
+        <label><input type="radio" name="q3">chủ động giao lưu/giao tiếp</label>
+        <label><input type="radio" name="q3">trầm tĩnh và dè dặt</label>
+      </li>
+    </ol>
+    <div class="section-title"><b>Phần 2.</b> Chọn từ hoặc nhóm từ nào đúng (gần đúng) với cách nghĩ hay hành động của bạn</div>
+    <table class="word-table">
+      <tr>
+        <td><span class="num">27.</span><label><input type="radio" name="q27">Lên kế hoạch</label><label><input type="radio" name="q27">Không lên kế hoạch</label></td>
+        <td><span class="num">28.</span><label><input type="radio" name="q28">Các sự kiện</label><label><input type="radio" name="q28">Các ý tưởng</label></td>
+        <td><span class="num">29.</span><label><input type="radio" name="q29">Trầm tĩnh</label><label><input type="radio" name="q29">Nồng nhiệt</label></td>
+        <td><span class="num">30.</span><label><input type="radio" name="q30">Có sức thuyết phục</label><label><input type="radio" name="q30">Làm cảm động</label></td>
+      </tr>
+      <tr>
+        <td><span class="num">31.</span><label><input type="radio" name="q31">Tưởng tượng</label><label><input type="radio" name="q31">Thực tế</label></td>
+        <td><span class="num">32.</span><label><input type="radio" name="q32">Lợi ích</label><label><input type="radio" name="q32">Phước lành (Phù hộ)</label></td>
+        <td><span class="num">33.</span><label><input type="radio" name="q33">Người cư xử hòa giải</label><label><input type="radio" name="q33">Người phán xét/chỉ trích</label></td>
+        <td><span class="num">34.</span><label><input type="radio" name="q34">Có hệ thống</label><label><input type="radio" name="q34">Tự ý/Linh hoạt</label></td>
+      </tr>
+      <tr>
+        <td><span class="num">35.</span><label><input type="radio" name="q35">Tuyên bố</label><label><input type="radio" name="q35">Quan niệm</label></td>
+        <td><span class="num">36.</span><label><input type="radio" name="q36">Kín đáo</label><label><input type="radio" name="q36">Thích nói</label></td>
+        <td><span class="num">37.</span><label><input type="radio" name="q37">Phân tích</label><label><input type="radio" name="q37">Đồng cảm</label></td>
+        <td><span class="num">38.</span><label><input type="radio" name="q38">Sáng tạo cái mới</label><label><input type="radio" name="q38">Làm dựa trên cái có sẵn</label></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

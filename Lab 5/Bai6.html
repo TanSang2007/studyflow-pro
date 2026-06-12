@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngoại ngữ & Tin học</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; display: flex; justify-content: center; }
+        .container { background: white; width: 650px; padding: 20px; border: 1px solid #ccc; border-top: 4px solid #d9534f; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .title { color: #337ab7; font-weight: bold; border-left: 4px solid red; padding-left: 10px; }
+        
+        .form-group { display: flex; margin-bottom: 15px; }
+        .label { width: 180px; text-align: right; padding-right: 15px; font-size: 13px; color: #555; }
+        .input-content { flex: 1; }
+        
+        select, input[type="text"], textarea { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; }
+        textarea { height: 80px; }
+
+        /* Style cho bảng kỹ năng */
+        table { width: 100%; font-size: 12px; border-collapse: collapse; margin-top: 5px; }
+        th { font-weight: normal; color: #666; padding-bottom: 5px; }
+        td { text-align: center; padding: 3px; }
+        .skill-name { text-align: right; padding-right: 15px; width: 80px; }
+
+        .btn-group { margin-left: 180px; display: flex; gap: 10px; margin-top: 15px; margin-bottom: 15px; }
+        .btn { padding: 6px 15px; border: none; border-radius: 3px; color: white; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .btn-save { background: #d9534f; }
+        .btn-cancel { background: #777; }
+        hr { border: 0; border-top: 1px dashed #ccc; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="title">Ngoại ngữ & Tin học <span style="font-style: italic; font-weight: normal; color: #77b5d9;">(không bắt buộc)</span></div>
+        <button style="font-size: 11px;">Rút gọn ▲</button>
+    </div>
+
+    <div class="form-group">
+        <div class="label">Ngoại ngữ</div>
+        <div class="input-content"><select><option>Chọn ngoại ngữ</option></select></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Trình độ</div>
+        <div class="input-content"><select><option>Chọn trình độ</option></select></div>
+    </div>
+    <div class="form-group">
+        <div class="label"></div>
+        <div class="input-content">
+            <table>
+                <tr>
+                    <th></th><th>Tốt</th><th>Khá</th><th>Trung bình</th><th>Kém</th>
+                </tr>
+                <tr><td class="skill-name">Nghe</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+<tr><td class="skill-name">Nói</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td class="skill-name">Đọc</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td class="skill-name">Viết</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-save">💾 Lưu</button>
+        <button class="btn btn-cancel">✖ Không lưu</button>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+        <div class="label">Tin học văn phòng</div>
+        <div class="input-content">
+            <table>
+                <tr>
+                    <th></th><th>Tốt</th><th>Khá</th><th>Trung bình</th><th>Kém</th>
+                </tr>
+                <tr><td class="skill-name">MS Word</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td class="skill-name">MS Excel</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td class="skill-name">MS Power Point</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td class="skill-name">MS Outlook</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="label">Phần mềm khác</div>
+        <div class="input-content"><input type="text"></div>
+    </div>
+    <div class="form-group">
+        <div class="label">Các thành tích học tập nổi bật khác</div>
+        <div class="input-content"><textarea></textarea></div>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-save">💾 Lưu</button>
+        <button class="btn btn-cancel">✖ Không lưu</button>
+    </div>
+</div>
+
+</body>
+</html>

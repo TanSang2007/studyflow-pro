@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết Quả Học Tập</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-weight: normal; /* Thiết lập mặc định không in đậm */
+        }
+        /* Chỉ định in đậm riêng cho Nam và Nữ */
+        .bold-text {
+            font-weight: bold;
+        }
+        .align-left {
+            text-align: left;
+            padding-left: 15px;
+        }
+        /* Căn phải cho dòng tổng số để sát ô số 04 */
+        .total-label {
+            text-align: right;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" style="width: 30%;">Họ và tên</th>
+                <th colspan="2">Năm sinh</th>
+                <th rowspan="2" style="width: 20%;">Điểm<br>Trung Bình</th>
+                <th rowspan="2" style="width: 20%;">Xếp loại</th>
+            </tr>
+            <tr>
+                <th class="bold-text" style="width: 15%;">Nam</th>
+                <th class="bold-text" style="width: 15%;">Nữ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="align-left">Kim Tiểu Phương</td>
+                <td></td>
+                <td>1988</td>
+                <td>8.2</td>
+                <td>Giỏi</td>
+            </tr>
+            <tr>
+                <td class="align-left">Ưng hoàng Phúc</td>
+                <td>1981</td>
+                <td></td>
+                <td>7.5</td>
+                <td>Khá</td>
+            </tr>
+            <tr>
+                <td class="align-left">Đàm Vĩnh Hưng</td>
+                <td>1979</td>
+                <td></td>
+                <td>5.6</td>
+                <td>T.Bình</td>
+            </tr>
+            <tr>
+                <td class="align-left">Trần Thu Hà</td>
+                <td></td>
+                <td>1981</td>
+                <td>6.7</td>
+                <td>Khá</td>
+            </tr>
+            <tr>
+                <td class="align-left">Lương Bằng Quang</td>
+                <td>1980</td>
+                <td></td>
+                <td>4.1</td>
+                <td>Kém</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">Tổng số học sinh đạt:</td>
+                <td colspan="2">04</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

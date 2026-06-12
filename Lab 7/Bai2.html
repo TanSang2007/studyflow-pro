@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký Diễn đàn</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .forum-table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+        width: 700px;
+        margin: 0 auto;
+      }
+      .forum-table td {
+        padding: 5px;
+      }
+      .label-col {
+        text-align: right;
+        width: 150px;
+        font-weight: bold;
+        font-size: 14px;
+        padding-right: 15px;
+        vertical-align: top;
+        padding-top: 8px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="tel"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 250px;
+      }
+
+      .name-group input {
+        width: 80px;
+        margin-right: 5px;
+      }
+      .note-text {
+        font-size: 12px;
+        font-style: italic;
+        color: #555;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .iframe-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+      }
+      iframe {
+        width: 600px;
+        height: 150px;
+        border: 1px solid #ccc;
+        background: #fdfdfd;
+      }
+
+      .btn-center {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .btn-submit-forum {
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <table class="forum-table">
+        <tr>
+          <td class="label-col">Tên đăng nhập</td>
+          <td><input type="text" name="username" placeholder="" required /></td>
+        </tr>
+        <tr>
+          <td class="label-col">Mật khẩu</td>
+          <td><input type="password" name="pass" placeholder="" required /></td>
+        </tr>
+        <tr>
+          <td class="label-col">Xác nhận mật khẩu</td>
+          <td>
+            <input type="password" name="repass" placeholder="" required />
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Địa chỉ Email</td>
+          <td>
+            <input type="email" name="email" placeholder="" required />
+            <span class="note-text"
+              >Email này dùng để nhận email kích hoạt tài khoản, lấy lại mật
+              khẩu,<br />thông báo từ ban quản trị...</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Xưng danh</td>
+          <td>
+            <select name="xungdanh">
+              <option value="Ban">Bạn</option>
+              <option value="Ong">Ông</option>
+              <option value="Ba">Bà</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Họ và Tên</td>
+          <td class="name-group">
+            <input type="text" name="ho" placeholder="Họ" required />
+            <input type="text" name="tendem" placeholder="Tên đệm" />
+            <input type="text" name="ten" placeholder="Tên" required />
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Năm sinh</td>
+          <td><input type="text" name="namsinh" style="width: 100px" /></td>
+        </tr>
+        <tr>
+          <td class="label-col">Giới tính</td>
+          <td>
+            <label><input type="radio" name="gender" value="Nam" /> Nam</label>
+            <label><input type="radio" name="gender" value="Nu" /> Nữ</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Địa chỉ liên hệ</td>
+          <td><input type="text" name="diachi" style="width: 400px" /></td>
+        </tr>
+        <tr>
+          <td class="label-col">Tỉnh thành</td>
+          <td>
+            <select name="tinhthanh">
+              <option value="DaNang" selected>Đà Nẵng</option>
+              <option value="HCM">HCM</option>
+              <option value="HaNoi">Hà Nội</option>
+              <option value="Hue">Huế</option>
+              <option value="HaiPhong">Hải Phòng</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Điện thoại</td>
+          <td>
+            <input type="tel" name="phone" required pattern="[0-9]{10,11}" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label-col">Di động</td>
+          <td><input type="tel" name="mobile" pattern="[0-9]{10,11}" /></td>
+        </tr>
+      </table>
+
+      <div class="iframe-container">
+        <iframe
+          srcdoc="<h2 style='color:#e74c3c; text-align:center;'>ĐIỀU KHOẢN SỬ DỤNG</h2><p style='text-align:center;'>Chào mừng bạn đến website chơi game trực tuyến GameVui</p><p style='text-align:right; font-style:italic;'>Sửa đổi lần cuối: Tháng 09 năm 2014</p><p>Cùng với việc truy cập và sử dụng các dịch vụ của GameVui, bạn cần tuân theo các Điều khoản sử dụng được liệt kê dưới đây...</p>"
+        ></iframe>
+      </div>
+
+      <div class="btn-center">
+        <button type="submit" class="btn-submit-forum">
+          Tôi đồng ý đăng ký thành viên
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

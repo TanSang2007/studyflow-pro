@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1 - Tin tức VKU</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-red {
+        background-color: #d31145; /* Màu đỏ VKU */
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .main-layout {
+        display: flex;
+        gap: 20px;
+      }
+
+      .featured-news {
+        flex: 7;
+        display: flex;
+        gap: 20px;
+      }
+
+      .news-card {
+        flex: 1;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .news-card video,
+      .news-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-color: #000;
+      }
+
+      .news-content {
+        padding: 15px;
+      }
+
+      .news-date {
+        color: #d31145;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .news-title {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .news-desc {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .other-news {
+        flex: 3;
+      }
+      .header-yellow {
+        background-color: #fdb913;
+        color: #333;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .small-news-list {
+        list-style: none;
+      }
+
+      .small-news-item {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 10px;
+      }
+
+      .small-news-item img {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .small-news-item h4 {
+        font-size: 13px;
+        color: #333;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-red">Tin tức nổi bật</div>
+
+      <div class="main-layout">
+        <div class="featured-news">
+          <div class="news-card">
+            <video controls>
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+              Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+            <div class="news-content">
+              <div class="news-date">31/01/2026</div>
+              <h3 class="news-title">
+                Triển khai Nghị quyết 57-NQ/TW và Kết luận 45-TB/TGV: VKU làm
+                việc với Đại học Hongik...
+              </h3>
+              <p class="news-desc">
+                Sáng ngày 30/01/2026. Trường Đại học Công nghệ Thông tin và
+                Truyền thông Việt - Hàn (VKU), Đại học Đà Nẵng đã...
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Ảnh minh họa"
+            />
+            <div class="news-content">
+              <div class="news-date">19/03/2026</div>
+              <h3 class="news-title">
+                VKU tiếp và làm việc với đoàn công tác thành phố Kitakyushu
+                (Nhật Bản)...
+              </h3>
+              <p class="news-desc">
+                Sáng ngày 18/3/2026. Trường Đại học Công nghệ Thông tin và
+                Truyền thông Việt - Hàn (VKU), Đại Học Đà Nẵng đã tiếp...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-news">
+          <div class="header-yellow">Tin tức khác</div>
+          <ul class="small-news-list">
+            <li class="small-news-item">
+              <img
+                src="https://nads.1cdn.vn/2025/01/10/W_ban-chieu8.jpg"
+              />
+              <div>
+                <div
+                  class="news-date"
+                  style="font-size: 12px; margin-bottom: 0"
+                >
+                  27/03/2026
+                </div>
+                <h4>
+                  VKU tổ chức trải nghiệm thực tế - mở khóa tư duy nghề
+                  nghiệp...
+                </h4>
+              </div>
+            </li>
+            <li class="small-news-item">
+              <img
+                src="https://nads.1cdn.vn/2025/01/10/W_ban-chieu13.jpg"
+                alt="Thumbnail"
+              />
+              <div>
+                <div
+                  class="news-date"
+                  style="font-size: 12px; margin-bottom: 0"
+                >
+                  19/03/2026
+                </div>
+                <h4>
+                  VKU làm việc với SotaTek, thúc đẩy hợp tác đào tạo gắn với
+                  doanh...
+                </h4>
+              </div>
+            </li>
+            <li class="small-news-item">
+              <img
+                src="https://nads.1cdn.vn/2025/01/10/W_ban-chieu7.jpg"
+                alt="Thumbnail"
+              />
+              <div>
+                <div
+                  class="news-date"
+                  style="font-size: 12px; margin-bottom: 0"
+                >
+                  18/03/2026
+                </div>
+                <h4>
+                  VKU triển khai Chiến dịch tuyển sinh năm 2026 tại các tỉnh...
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

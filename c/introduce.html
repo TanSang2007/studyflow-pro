@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Giới thiệu | StudyFlow Pro</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HIỆU ỨNG NỀN -->
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+
+    <!-- HẠT BAY -->
+    <div id="particles"></div>
+
+    <div class="container">
+      <!-- NAVBAR -->
+
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-icon">📚</div>
+
+          <span>StudyFlow Pro</span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="home.html"> Home </a>
+          </li>
+
+          <li>
+            <a href="intro.html" class="active-link"> Giới thiệu </a>
+          </li>
+        </ul>
+
+        <div class="nav-buttons">
+          <button class="btn login-btn">
+            <a href="login.html" style="text-decoration: none; color: inherit"
+              >Login</a
+            >
+          </button>
+
+          <button class="btn register-btn">
+            <a
+              href="register.html"
+              style="text-decoration: none; color: inherit"
+              >Register</a
+            >
+          </button>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+
+      <section class="intro-hero">
+        <div class="intro-tag">⚡ CÔNG NGHỆ LÕI</div>
+
+        <h1>
+          Kiến Tạo Tương Lai
+          <span>Học Tập Đỉnh Cao</span>
+        </h1>
+
+        <p>
+          Khám phá hệ sinh thái công cụ được thiết kế dành riêng cho sinh viên
+          hiện đại.
+        </p>
+      </section>
+
+      <!-- FEATURES -->
+
+      <section class="features-grid">
+        <!-- CARD 1 -->
+
+        <div class="feature-card">
+          <div class="feature-icon">◎</div>
+
+          <h2>Quản lý Deadline thông minh</h2>
+
+          <p>Hệ thống AI hỗ trợ sắp xếp nhiệm vụ và thời gian học tập.</p>
+        </div>
+
+        <!-- IMAGE -->
+
+        <div class="feature-image big-image">
+          <img
+            src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="feature-card">
+          <div class="feature-icon">✦</div>
+
+          <h2>Lịch học tự động</h2>
+
+          <p>Tự động đề xuất lịch học phù hợp.</p>
+
+          <img
+            class="mini-image"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="feature-card wide-card">
+          <div class="feature-icon">⌁</div>
+
+          <h2>Theo dõi tiến độ</h2>
+
+          <p>Biểu đồ học tập trực quan hiện đại.</p>
+
+          <!-- CHART -->
+
+          <div class="chart">
+            <div class="bar b1"></div>
+            <div class="bar b2"></div>
+            <div class="bar b3"></div>
+            <div class="bar b4"></div>
+            <div class="bar b5"></div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="feature-card notification-card">
+          <img
+            class="sphere-image"
+            src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <div>
+            <div class="feature-icon">🔔</div>
+
+            <h2>Thông báo nhắc nhở</h2>
+
+            <p>Hệ thống cảnh báo thông minh giúp bạn không bỏ lỡ deadline.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+      const particles = document.getElementById("particles");
+
+      for (let i = 0; i < 40; i++) {
+        const particle = document.createElement("div");
+
+        particle.classList.add("particle");
+
+        particle.style.left = Math.random() * 100 + "vw";
+
+        particle.style.top = Math.random() * 100 + "vh";
+
+        particle.style.animationDuration = Math.random() * 10 + 5 + "s";
+
+        particle.style.opacity = Math.random();
+
+        /* RANDOM SIZE */
+
+        particle.style.width = Math.random() * 5 + 3 + "px";
+
+        particle.style.height = particle.style.width;
+
+        particles.appendChild(particle);
+      }
+    </script>
+  </body>
+</html>

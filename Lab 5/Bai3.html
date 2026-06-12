@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eee;
+        }
+
+        .page {
+            width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border: 2px solid #ccc;
+        }
+
+        .header {
+            background: #b7e4c7;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            background: #f4a6a6;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .main {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .entry {
+            background: #8ecae6;
+            padding: 30px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #8ecae6;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #80ed99;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="header">HEADER</div>
+
+    <div class="content">
+        <div class="main">
+            <div class="entry">ENTRY</div>
+            <div class="entry">ENTRY</div>
+            <div class="entry">ENTRY</div>
+        </div>
+
+        <div class="sidebar">SIDEBAR</div>
+    </div>
+
+    <div class="footer">FOOTER</div>
+</div>
+
+</body>
+</html>

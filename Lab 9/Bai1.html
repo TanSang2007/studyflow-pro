@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>LAB 9 - Bài 1</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 { text-align: center; }
+    .scene {
+      width: 220px;
+      height: 220px;
+      perspective: 400px;
+      perspective-origin: 50% 50%;
+      margin: 30px auto;
+    }
+    .cube {
+      width: 140px;
+      height: 140px;
+      position: relative;
+      margin: 40px auto;
+      transform-style: preserve-3d;
+      animation: spinCube 5s linear infinite;
+    }
+    .face {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background: rgba(55,55,55,.9);
+      border: 2px solid #222;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backface-visibility: visible;
+    }
+    .front  { transform: translateZ(70px); }
+    .back   { transform: rotateY(180deg) translateZ(70px); }
+    .right  { transform: rotateY(90deg) translateZ(70px); }
+    .left   { transform: rotateY(-90deg) translateZ(70px); }
+    .top    { transform: rotateX(90deg) translateZ(70px); }
+    .bottom { transform: rotateX(-90deg) translateZ(70px); }
+    @keyframes spinCube {
+      from { transform: rotateX(-15deg) rotateY(0deg); }
+      to   { transform: rotateX(-15deg) rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Bài 1: CSS3 Animation - Cube</h2>
+    <div class="scene">
+      <div class="cube">
+        <div class="face front">front</div>
+        <div class="face back">back</div>
+        <div class="face right">right</div>
+        <div class="face left">left</div>
+        <div class="face top">top</div>
+        <div class="face bottom">bottom</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

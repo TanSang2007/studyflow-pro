@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>LAB 8 - Bài 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f1f1f1;
+      color: #111;
+    }
+    .select-area {
+      width: 750px;
+      margin: 30px auto;
+      background: linear-gradient(#f7f7f7, #ddd);
+      padding-bottom: 8px;
+    }
+    .role {
+      text-align: center;
+      padding: 16px 0 8px;
+    }
+    .role select { width: 175px; }
+    .select-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 4px 12px 8px;
+    }
+    .select-top select { width: 140px; margin-top: 2px; }
+    .select-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px;
+      padding: 8px 42px 12px;
+      background: #f8f8f8;
+    }
+    .select-box { text-align: center; }
+    .select-box p { margin: 0 0 2px; }
+    select[multiple] {
+      min-height: 100px;
+      width: 150px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="select-area">
+    <div class="role">Current role: <select><option>All</option></select></div>
+    <div class="select-top">
+      <div>People in the course<br>Show only users of group:<br><select><option>All participants</option><option>Only Class</option></select></div>
+      <div>Groups<br>Use only groups of:<br><select><option>Project A</option><option>Project B</option></select></div>
+      <div>Members of selected group</div>
+    </div>
+    <div class="select-bottom">
+      <div class="select-box">
+        <p>People in the course</p>
+        <select multiple>
+          <option># Ángela Profesor (2)</option>
+          <option># Enrique Castro (1)</option>
+          <option># Martín Profesor (2)</option>
+          <option>- Pilar Profesor (1)</option>
+          <option>Rafael Guerra (3)</option>
+          <option>Rosa Sánchez (3)</option>
+        </select>
+      </div>
+      <div class="select-box">
+        <p>Groups</p>
+        <select multiple>
+          <option>Project A</option>
+          <option>Project B</option>
+          <option>WritingA01 (2)</option>
+          <option>WritingA02 (3)</option>
+          <option>WritingA03 (2)</option>
+          <option>WritingA04 (2)</option>
+        </select>
+      </div>
+      <div class="select-box">
+        <p>Members of selected group</p>
+        <select multiple>
+          <option>Claudia Benítez</option>
+          <option>Inés Herrero</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
